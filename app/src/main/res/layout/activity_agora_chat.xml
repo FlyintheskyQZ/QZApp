@@ -9,7 +9,7 @@
         android:id="@+id/chat_message_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#32c5f3"
+        android:background="#ea9518"
         android:gravity="center"
         android:padding="15dp"
         android:textColor="#ffffff"
@@ -21,7 +21,7 @@
         android:layout_marginLeft="5dp"
         android:layout_marginTop="10dp"
         android:padding="5dp"
-        android:src="@mipmap/ic_chat_back"
+        android:src="@mipmap/ic_ordersetting_back"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"/>
 
@@ -33,7 +33,7 @@
         android:layout_marginBottom="20dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:background="#32c5f3"
+        android:background="@drawable/btn_agorachat_send_bg"
         android:clickable="true"
         android:gravity="center"
         android:text="@string/str_send"
@@ -41,7 +41,7 @@
         app:layout_constraintHorizontal_weight="1.5"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/chat_message_edittext"
-        app:layout_constraintEnd_toStartOf="@+id/chat_selection_imgbtn"/>
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <ImageView
         android:id="@+id/chat_selection_imgbtn"
@@ -53,10 +53,10 @@
         android:clickable="true"
         android:src="@mipmap/ic_chat_imagebtn"
         android:textColor="#ffffff"
-        app:layout_constraintHorizontal_weight="1"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/chat_selection_chatbtn"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintEnd_toStartOf="@+id/chat_message_edittext"/>
 
     <EditText
         android:id="@+id/chat_message_edittext"
@@ -70,7 +70,7 @@
         android:lines="1"
         app:layout_constraintHorizontal_weight="4"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/chat_selection_imgbtn"
         app:layout_constraintEnd_toStartOf="@+id/chat_selection_chatbtn"/>
 
     <androidx.recyclerview.widget.RecyclerView
