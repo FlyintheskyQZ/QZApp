@@ -1,0 +1,332 @@
+<resources>
+    <string name="app_name">QZApp</string>
+    <string name="agora_app_id">b47e6e81109c4bdfab7d0c4cd07c7802</string>
+    <string name="agora_access_token"></string>
+
+    <!--登陆界面提示    -->
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_username">帐号昵称</string>
+    <string name="prompt_password">密码</string>
+    <string name="action_sign_in">登录</string>
+    <string name="action_register_finished">注册成为新用户！</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="login_notice">您好，请先登录</string>
+    <string name="login_register_notice">没有账户？请先注册！</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+    <string name="toolbar_login_backup">返回</string>
+    <string name="toolbar_login_settings">设置</string>
+
+    <!--注册界面提示    -->
+    <string name="register_bg">欢迎用户注册</string>
+    <string name="action_register_in">OK</string>
+    <string name="checkbox_rembemer">   记住账号密码</string>
+    <string name="register_username">设置帐号昵称</string>
+    <string name="register_password">设置密码</string>
+    <string name="register_realname">请输入真实姓名</string>
+    <string name="register_realID">请输入身份证号</string>
+    <string name="register_phonenumber">请输入联系电话</string>
+    <string name="register_email">请输入邮箱地址</string>
+    <string name="register_select_normal">客户</string>
+    <string name="register_select_factory">商家</string>
+    <string name="register_select_male">先生</string>
+    <string name="register_select_female">女士</string>
+    <string name="register_dialog_title">恭喜注册成功！！</string>
+    <string name="register_dialog_message">直接登录还是返回登陆界面？</string>
+    <string name="register_dialog_posibutton">直接登录</string>
+    <string name="register_dialog_negabutton">返回登陆界面</string>
+
+    <!--注册界面错误提示    -->
+    <string name="invalid_username">需只包含数字、字母或中文</string>
+    <string name="invalid_password">需6-16个字符,不全为数字或字母，首位不为数字</string>
+    <string name="invalid_realname">姓名不合法</string>
+    <string name="invalid_realID">身份证号不合法（15-18位）</string>
+    <string name="invalid_phonenumber">手机号不正确</string>
+    <string name="invalid_email">邮箱地址不合法</string>
+    <string name="invalid_select">请选择一项身份</string>
+
+    <!--mainActivity BottomNavigationBar    -->
+    <string name="ic_bottom_search">主页</string>
+    <string name="ic_bottom_order">订单</string>
+    <string name="ic_bottom_chat">消息</string>
+    <string name="ic_bottom_setting">我的设置</string>
+
+    <!--OrderFragment UI    -->
+    <string name="item_order_isFinished">已完成</string>
+    <string name="item_order_isNotFinished">未完成</string>
+    <string name="order_error">出现错误！！</string>
+    <string name="order_netError_content">请检查网络配置！</string>
+    <string name="order_netError_dialog_ok">好的</string>
+    <string name="order_netError_dialog_cancel">取消</string>
+    <string name="order_unknownError">出现未知错误</string>
+
+    <!--OrderContentActivity    -->
+    <string name="orderContent_noOrder_title">空订单</string>
+    <string name="orderContent_noOrder_content">订单被删除或状态已改变</string>
+    <string name="orderContent_noOrder_ok">好的</string>
+    <string name="orderContent_noOrder_cancel">返回</string>
+    <string name="orderContent_noOppositeCustomer_title">空用户</string>
+    <string name="orderContent_noOppositeCustomer_content">该用户不存在</string>
+    <string name="orderContent_pdfrequest_cancel">已取消下载PDF文件！</string>
+    <string name="orderContent_pdf_cancelOrPause">中断下载！</string>
+    <string name="orderContent_pdf_cancelOrPause_text">暂停下载或是取消下载？</string>
+    <string name="orderContent_pdf_pause">暂停</string>
+    <string name="orderContent_pdf_cancel">取消</string>
+    <string name="orderContent_pdf_downloadConfrim">下载PDF！</string>
+    <string name="orderContent_pdf_downloadConfrim_text">准备下载PDF</string>
+    <string name="orderContent_pdf_download_still">继续下载PDF</string>
+    <string name="orderContent_pdf_downloadConfrim_yes">好的</string>
+    <string name="orderContent_saler_cancelOrder_title">撤销订单</string>
+    <string name="orderContent_saler_cancelOrder_message">确定要撤销订单吗？</string>
+    <string name="orderContent_saler_cancelOrder_yes">确定</string>
+    <string name="orderContent_saler_cancelOrder_no">取消</string>
+    <string name="orderContent_noAction_title">未响应</string>
+    <string name="orderContent_noAction_content">服务器未响应</string>
+    <string name="orderContent_noAction_ok">好的</string>
+    <string name="orderContent_deleteFailed_title">撤销失败</string>
+    <string name="orderContent_deleteFailed_content">服务器撤销失败，该订单可能已被订购</string>
+    <string name="orderContent_deleteFailed_ok">好的</string>
+    <string name="orderContent_deleteSuccess_title">删除成功</string>
+    <string name="orderContent_deleteSuccess_content">订单已成功删除，返回订单列表</string>
+    <string name="orderContent_deleteSuccess_ok">好的</string>
+    <string name="orderContent_sendEmailSuccess_title">发送成功！</string>
+    <string name="orderContent_sendEmailSuccess_message">本次实验报告成功发送到指定邮箱，请注意查收！</string>
+    <string name="orderContent_sendEmailSuccess_positive">好的</string>
+    <string name="orderContent_callPhone_title">拨打电话</string>
+    <string name="orderContent_callPhone_message">当前即将跳转到拨号界面，确认拨打对方电话？</string>
+    <string name="orderContent_callPhone_positive">确定</string>
+    <string name="orderContent_callPhone_negative">取消</string>
+
+
+    <!--  OrderSettingActivity  -->
+    <string name="orderSetting_device_item"><u>item</u></string>
+    <string name="orderSetting_error_wrongOrderId_title">订单错误</string>
+    <string name="orderSetting_error_wrongOrderId_message">订单可能已删除，请核对后再查看！</string>
+    <string name="orderSetting_error_wrongOrderId_button">好的</string>
+    <string name="orderSetting_error_NoOrder_title">无该订单</string>
+    <string name="orderSetting_error_NoOrder_message">订单可能已删除，请核对后再查看！</string>
+    <string name="orderSetting_error_NoOrder_button">好的</string>
+    <string name="orderSetting_error_exception_title">出现异常</string>
+    <string name="orderSetting_error_exception_message">出现未知异常！</string>
+    <string name="orderSetting_error_exception_button">好的</string>
+    <string name="orderSetting_error_InstrumentLack_title">无可用仪器</string>
+    <string name="orderSetting_error_InstrumentLack_message">检测到您尚未注册仪器，请先注册！</string>
+    <string name="orderSetting_error_InstrumentLack_button">好的</string>
+
+    <string name="orderSetting_error_EmptymaterialName_title">材料名称为空</string>
+    <string name="orderSetting_error_EmptymaterialName_message">材料名称处为空，需重新填写！</string>
+    <string name="orderSetting_error_EmptymaterialType_title">材料类型为空</string>
+    <string name="orderSetting_error_EmptymaterialType_message">材料类型处为空，需重新选择！</string>
+    <string name="orderSetting_error_noChangeModify_title">无更改</string>
+    <string name="orderSetting_error_noChangeModify_message">无信息发生更改，请认真填写，或者返回！</string>
+    <string name="orderSetting_error_lackModifyOpinion_title">无审批意见</string>
+    <string name="orderSetting_error_lackModifyOpinion_message">请给出客户审批意见，方便对方修改！</string>
+    <string name="orderSetting_error_ModifyOpinionnoChange_title">无审批意见</string>
+    <string name="orderSetting_error_ModifyOpinionnoChange_message">请给出客户审批意见，方便对方修改！</string>
+    <string name="orderSetting_error_lackBalance_title">余额不足</string>
+    <string name="orderSetting_error_lackBalance_message">您的余额不足，是否现在充值？</string>
+    <string name="orderSetting_error_positive_button">好的</string>
+    <string name="orderSetting_error_negative_button">取消</string>
+
+    <string name="orderSetting_noReturn_title">服务器无反馈</string>
+    <string name="orderSetting_noReturn_message">服务器正忙，无反馈，请稍后再试！</string>
+    <string name="orderSetting_noReturn_button">好的</string>
+
+    <string name="orderSetting_updateorderfailed_title">更新失败</string>
+    <string name="orderSetting_updateorderfailedmessage">更新失败，请稍后再试！</string>
+    <string name="orderSetting_updateorderfailed_button">好的</string>
+
+
+    <!--    AgoraChatActivity-->
+    <string name="single_input">输入文本内容</string>
+    <string name="str_send">发送</string>
+    <string name="str_login">Login</string>
+    <string name="str_account">Account</string>
+    <string name="account_empty">Account can not be empty</string>
+    <string name="account_too_long">Account can not exceed 64 characters</string>
+    <string name="account_starts_with_space">Account can not starts with space</string>
+    <string name="account_literal_null">Account can not be \"null\"</string>
+
+    <string name="title_peer_msg">Peer to peer message</string>
+    <string name="title_channel_message">Channel message</string>
+    <string name="hint_friend">Friends name</string>
+    <string name="hint_channel">Channel name</string>
+    <string name="hint_enable_offline_message">Enable offline message</string>
+    <string name="account_cannot_be_yourself">Account can not be yourself</string>
+    <string name="channel_name_empty">Channel name can not be empty</string>
+    <string name="channel_name_too_long">Channel name can not exceed 64 characters</string>
+    <string name="channel_name_starts_with_space">Channel name can not start with space</string>
+    <string name="channel_name_literal_null">Channel name can not be \"null\"</string>
+    <string name="btn_chat">Chat</string>
+    <string name="btn_join">Join</string>
+
+    <string name="channel_title" translatable="false">%s(%d)</string>
+    <string name="join_channel_failed">Join channel failed</string>
+    <string name="send_msg_failed">Failed to send message</string>
+    <string name="peer_offline">Peer is offline</string>
+    <string name="message_cached">Message cached by server</string>
+    <string name="reconnecting">Network reconnecting ...</string>
+    <string name="account_offline">Connection lost</string>
+
+    <string name="chat_need_login_title">需要登陆</string>
+    <string name="chat_need_login_message">尚未登录聊天系统，需要登陆</string>
+    <string name="chat_positive_button">好的</string>
+
+
+    <!--    searchFragment-->
+    <string name="search_locationError_title">GPS启用故障</string>
+    <string name="search_locationError_message">GPS未开启或应用授权被取消！</string>
+    <string name="search_locationError_positive">跳转到GPS设置</string>
+    <string name="search_locationError_negative">取消</string>
+    <string name="search_loadItemsError_empty_title">无订单可选</string>
+    <string name="search_loadItemsError_empty_message">未接收到任何有效订单，请稍后再尝试</string>
+    <string name="item_search_unregistered">待订购</string>
+
+    <!--    PasswordSettingActivity-->
+    <string name="passwordsetting_updateError_empty_title">修改失败</string>
+    <string name="passwordsetting_updateError_empty_message">请求超时，请稍后再尝试</string>
+    <string name="passwordsetting_updateSuccess_title">修改成功</string>
+    <string name="passwordsetting_updateSuccess_message">恭喜！修改密码成功！</string>
+    <string name="passwordsetting_updateSuccess_positive">返回</string>
+
+    <!--    CustomerInfoSettingActivity-->
+    <string name="customerinfosetting_updateSuccess_title">修改成功</string>
+    <string name="customerinfosetting_updateSuccess_message">恭喜！修改信息成功！</string>
+    <string name="customerinfosetting_updateSuccess_positive">返回</string>
+
+    <!--    RechargeActivity-->
+    <string name="recharge_updateSuccess_title">修改成功</string>
+    <string name="recharge_updateSuccess_message">恭喜！充值成功！</string>
+    <string name="recharge_updateSuccess_positive">返回</string>
+
+    <!--    RegisterDeviceActivity-->
+    <string name="registerdevice_Success_title">修改成功</string>
+    <string name="registerdevice_Success_message">恭喜！注册成功！等待审核！</string>
+    <string name="registerdevice_Success_positive">返回</string>
+
+    <!--    SettingFragment-->
+    <string name="setting_clearcache_title">清除缓存</string>
+    <string name="setting_clearcache_message">将会清理所有的聊天列表，确定吗？</string>
+    <string name="setting_clearcache_positive">确定</string>
+    <string name="setting_clearcache_negative">再考虑一下</string>
+
+    <!--    ReportDisplayActivity-->
+    <string name="report_pdf_noDownload_title">未下载！</string>
+    <string name="report_pdf_noDownload_message">当前pdf文件尚未下载到本地，请至订单界面下载！</string>
+    <string name="report_pdf_noDownload_positive">好的</string>
+
+    <!--    DeviceLocationDisplayActivity-->
+    <string name="devicelocationdisplay_mark_title">选定位置</string>
+    <string name="devicelocationdisplay_mark_message">确定选定当前位置为仪器注册定位吗？</string>
+    <string name="devicelocationdisplay_mark_positive">确定</string>
+    <string name="devicelocationdisplay_mark_negative">取消</string>
+
+
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="large_text">
+        "Material is the metaphor.\n\n"
+
+        "A material metaphor is the unifying theory of a rationalized space and a system of motion."
+        "The material is grounded in tactile reality, inspired by the study of paper and ink, yet "
+        "technologically advanced and open to imagination and magic.\n"
+        "Surfaces and edges of the material provide visual cues that are grounded in reality. The "
+        "use of familiar tactile attributes helps users quickly understand affordances. Yet the "
+        "flexibility of the material creates new affordances that supercede those in the physical "
+        "world, without breaking the rules of physics.\n"
+        "The fundamentals of light, surface, and movement are key to conveying how objects move, "
+        "interact, and exist in space and in relation to each other. Realistic lighting shows "
+        "seams, divides space, and indicates moving parts.\n\n"
+
+        "Bold, graphic, intentional.\n\n"
+
+        "The foundational elements of print based design typography, grids, space, scale, color, "
+        "and use of imagery guide visual treatments. These elements do far more than please the "
+        "eye. They create hierarchy, meaning, and focus. Deliberate color choices, edge to edge "
+        "imagery, large scale typography, and intentional white space create a bold and graphic "
+        "interface that immerse the user in the experience.\n"
+        "An emphasis on user actions makes core functionality immediately apparent and provides "
+        "waypoints for the user.\n\n"
+
+        "Motion provides meaning.\n\n"
+
+        "Motion respects and reinforces the user as the prime mover. Primary user actions are "
+        "inflection points that initiate motion, transforming the whole design.\n"
+        "All action takes place in a single environment. Objects are presented to the user without "
+        "breaking the continuity of experience even as they transform and reorganize.\n"
+        "Motion is meaningful and appropriate, serving to focus attention and maintain continuity. "
+        "Feedback is subtle yet clear. Transitions are efﬁcient yet coherent.\n\n"
+
+        "3D world.\n\n"
+
+        "The material environment is a 3D space, which means all objects have x, y, and z "
+        "dimensions. The z-axis is perpendicularly aligned to the plane of the display, with the "
+        "positive z-axis extending towards the viewer. Every sheet of material occupies a single "
+        "position along the z-axis and has a standard 1dp thickness.\n"
+        "On the web, the z-axis is used for layering and not for perspective. The 3D world is "
+        "emulated by manipulating the y-axis.\n\n"
+
+        "Light and shadow.\n\n"
+
+        "Within the material environment, virtual lights illuminate the scene. Key lights create "
+        "directional shadows, while ambient light creates soft shadows from all angles.\n"
+        "Shadows in the material environment are cast by these two light sources. In Android "
+        "development, shadows occur when light sources are blocked by sheets of material at "
+        "various positions along the z-axis. On the web, shadows are depicted by manipulating the "
+        "y-axis only. The following example shows the card with a height of 6dp.\n\n"
+
+        "Resting elevation.\n\n"
+
+        "All material objects, regardless of size, have a resting elevation, or default elevation "
+        "that does not change. If an object changes elevation, it should return to its resting "
+        "elevation as soon as possible.\n\n"
+
+        "Component elevations.\n\n"
+
+        "The resting elevation for a component type is consistent across apps (e.g., FAB elevation "
+        "does not vary from 6dp in one app to 16dp in another app).\n"
+        "Components may have different resting elevations across platforms, depending on the depth "
+        "of the environment (e.g., TV has a greater depth than mobile or desktop).\n\n"
+
+        "Responsive elevation and dynamic elevation offsets.\n\n"
+
+        "Some component types have responsive elevation, meaning they change elevation in response "
+        "to user input (e.g., normal, focused, and pressed) or system events. These elevation "
+        "changes are consistently implemented using dynamic elevation offsets.\n"
+        "Dynamic elevation offsets are the goal elevation that a component moves towards, relative "
+        "to the component’s resting state. They ensure that elevation changes are consistent "
+        "across actions and component types. For example, all components that lift on press have "
+        "the same elevation change relative to their resting elevation.\n"
+        "Once the input event is completed or cancelled, the component will return to its resting "
+        "elevation.\n\n"
+
+        "Avoiding elevation interference.\n\n"
+
+        "Components with responsive elevations may encounter other components as they move between "
+        "their resting elevations and dynamic elevation offsets. Because material cannot pass "
+        "through other material, components avoid interfering with one another any number of ways, "
+        "whether on a per component basis or using the entire app layout.\n"
+        "On a component level, components can move or be removed before they cause interference. "
+        "For example, a floating action button (FAB) can disappear or move off screen before a "
+        "user picks up a card, or it can move if a snackbar appears.\n"
+        "On the layout level, design your app layout to minimize opportunities for interference. "
+        "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
+        "when a user tries to pick up one of cards.\n\n"
+    </string>
+</resources>

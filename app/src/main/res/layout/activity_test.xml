@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.Test"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/main_to_agora"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="cs"
+        android:textAlignment="center"/>
+
+    <Button
+        android:id="@+id/http_test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="http"
+        android:textAlignment="center"/>
+
+    <Button
+        android:id="@+id/login_test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="login"
+        android:textAlignment="center"/>
+
+    <Button
+        android:id="@+id/main_test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="main"
+        android:textAlignment="center"/>
+
+    <Button
+        android:id="@+id/test_orderSetting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ordersetting"
+        android:textAlignment="center"/>
+
+
+
+</LinearLayout>

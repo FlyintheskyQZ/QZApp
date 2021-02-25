@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <root-path   path="Android/data/seu.qz.qzapp/"
+        name="files_root" />
+    <root-path   path="."
+        name="external_storage_root" />
+</paths>

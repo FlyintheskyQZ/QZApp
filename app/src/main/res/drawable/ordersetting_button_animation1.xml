@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<!--    按键点击时的颜色-->
+    <item android:state_pressed="true">
+        <shape>
+            <!---->
+            <gradient android:angle="0" android:endColor="#DC143C" android:startColor="#EE3B3B" android:type="linear" />
+            <corners android:radius="25dp" />
+            <!-- padding：Button里面的文字与Button边界的间隔 -->
+            <!--        <stroke android:width="1dp" />-->
+        </shape>
+    </item>
+
+    <!--禁用按键时颜色-->
+    <item android:state_enabled="false">
+        <shape>
+            <gradient android:angle="0" android:endColor="#FF6633" android:startColor="#FF9900" android:type="linear" />
+            <corners android:radius="25dp" />
+        </shape>
+    </item>
+<!--其他状态下颜色-->
+    <item>
+        <shape>
+            <gradient android:angle="0" android:endColor="#FF6633" android:startColor="#FF6633" android:type="linear" />
+            <corners android:radius="25dp" />
+        </shape>
+    </item>
+
+</selector>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    android:background="#ffffff"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/searchfragment_dialog_price_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="价格条件配置"
+        android:textSize="18dp"
+        android:textColor="#669999"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"/>
+
+    <View
+        android:id="@+id/searchfragment_dialog_price_line1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#808080"
+        app:layout_constraintTop_toBottomOf="@+id/searchfragment_dialog_price_title"/>
+
+    <TextView
+        android:id="@+id/searchfragment_dialog_price_interval_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="65dp"
+        android:layout_marginLeft="10dp"
+        android:textStyle="bold"
+        android:text="价格区间(￥)"
+        app:layout_constraintTop_toBottomOf="@+id/searchfragment_dialog_price_line1"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <View
+        android:layout_width="195dp"
+        android:layout_height="40dp"
+        android:background="@drawable/timesetting_textview_bg"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="54dp"
+        app:layout_constraintTop_toBottomOf="@+id/searchfragment_dialog_price_line1"
+        app:layout_constraintStart_toEndOf="@+id/searchfragment_dialog_price_interval_text"/>
+
+    <EditText
+        android:id="@+id/searchfragment_dialog_price_bottom"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="15dp"
+        android:text="0"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:background="@drawable/edittext_search_price"
+        app:layout_constraintTop_toBottomOf="@+id/searchfragment_dialog_price_line1"
+        app:layout_constraintStart_toEndOf="@+id/searchfragment_dialog_price_interval_text"/>
+
+    <ImageView
+        android:id="@+id/searchfragment_dialog_price_interval"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="10dp"
+        android:scaleType="centerInside"
+        android:scaleX="0.7"
+        android:scaleY="0.7"
+        android:src="@mipmap/ic_searchfragment_price_interval"
+        app:layout_constraintTop_toBottomOf="@+id/searchfragment_dialog_price_line1"
+        app:layout_constraintStart_toEndOf="@+id/searchfragment_dialog_price_bottom"/>
+
+    <EditText
+        android:id="@+id/searchfragment_dialog_price_top"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="0"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:background="@drawable/edittext_search_price"
+        app:layout_constraintTop_toTopOf="@+id/searchfragment_dialog_price_bottom"
+        app:layout_constraintStart_toEndOf="@+id/searchfragment_dialog_price_interval"/>
+
+    <Button
+        android:id="@+id/searchfragment_dialog_price_order"
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        android:background="@drawable/ordersetting_button_animation2"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="20dp"
+        android:text="价格正序"
+        android:textStyle="bold"
+        android:textColor="#D1EEEE"
+        app:layout_constraintTop_toBottomOf="@+id/searchfragment_dialog_price_bottom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/searchfragment_dialog_price_reverseorder"/>
+
+    <Button
+        android:id="@+id/searchfragment_dialog_price_reverseorder"
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        android:text="价格倒序"
+        android:textStyle="bold"
+        android:textColor="#D1EEEE"
+        android:background="@drawable/ordersetting_button_animation1"
+        app:layout_constraintTop_toTopOf="@+id/searchfragment_dialog_price_order"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/searchfragment_dialog_price_order"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/searchfragment_dialog_price_order"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <View
+            android:id="@+id/searchfragment_top_background"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:visibility="visible"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@color/searchFragment_search_background"/>
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchfragment_searchView"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/searchfragment_searchtext"
+            app:layout_constraintTop_toTopOf="@+id/searchfragment_top_background"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"/>
+
+    <ImageButton
+        android:id="@+id/searchfragment_addOrder"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_searchfragment_add_order"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#004080"
+        android:scaleType="centerInside"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/searchfragment_selector"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabMode="fixed"
+            app:layout_constraintTop_toBottomOf="@+id/searchfragment_top_background"
+            app:tabSelectedTextColor="@color/searchFragment_tab_selected_text"
+            app:tabTextColor="@color/searchFragment_tab_unselected_text"
+            app:tabIndicatorColor="@color/searchFragment_tab_indicator"
+            app:tabBackground="@drawable/searchfragment_tab_bg">
+
+
+<!--            <com.google.android.material.tabs.TabItem-->
+<!--                android:id="@+id/searchfragment_tab_time"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:icon="@mipmap/ic_searchfragment_order_time"-->
+<!--                android:text="时间顺序"/>-->
+<!--            <com.google.android.material.tabs.TabItem-->
+<!--                android:id="@+id/searchfragment_tab_price"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:icon="@mipmap/ic_searchfragment_order_price"-->
+<!--                android:text="价格顺序"/>-->
+<!--            <com.google.android.material.tabs.TabItem-->
+<!--                android:id="@+id/searchfragment_tab_location"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:icon="@mipmap/ic_searchfragment_order_location"-->
+<!--                android:text="位置顺序"/>-->
+        </com.google.android.material.tabs.TabLayout>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/searchfragment_freshlayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintVertical_weight="1"
+            app:layout_constraintTop_toBottomOf="@+id/searchfragment_selector"
+            app:layout_constraintBottom_toBottomOf="parent">
+            <ScrollView
+                android:id="@+id/searchfragment_scrollview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/searchfragment_recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </ScrollView>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

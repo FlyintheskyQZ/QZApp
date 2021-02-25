@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2f4f4"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <View
+        android:id="@+id/searchfragment_dialog_time_topbg"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/timesetting_top_bg"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <ImageButton
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="15dp"
+        android:src="@mipmap/ic_timesetting_back"
+        android:scaleType="centerInside"
+        android:background="#32CD32"
+        app:layout_constraintTop_toTopOf="@+id/searchfragment_dialog_time_title"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <TextView
+        android:id="@+id/searchfragment_dialog_time_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="时间条件配置"
+        android:textSize="25dp"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/searchfragment_dialog_time_topbg"
+        app:layout_constraintHorizontal_bias="0.5"/>
+
+    <View
+        android:id="@+id/timesetting_inputarea"
+        android:layout_width="0dp"
+        android:layout_height="260dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/timesetting_input_bg"
+        app:layout_constraintTop_toBottomOf="@+id/searchfragment_dialog_time_topbg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <TextView
+        android:id="@+id/searchfragment_dialog_time_interval_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        android:textColor="#1296db"
+        android:text="时间区间选择"
+        android:textSize="20dp"
+        app:layout_constraintTop_toTopOf="@+id/timesetting_inputarea"
+        app:layout_constraintStart_toStartOf="@+id/timesetting_inputarea"
+        app:layout_constraintEnd_toEndOf="@+id/timesetting_inputarea"/>
+
+    <TextView
+        android:id="@+id/searchfragment_dialog_time_interval_start_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="起始时间"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintStart_toStartOf="@+id/timesetting_inputarea"
+        app:layout_constraintTop_toBottomOf="@+id/searchfragment_dialog_time_interval_text"/>
+    <TextView
+        android:id="@+id/searchfragment_dialog_time_start_filter"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:background="@drawable/timesetting_textview_bg"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:textSize="20dp"
+        android:textColor="#000000"
+        android:text="Start"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="@+id/timesetting_inputarea"
+        app:layout_constraintEnd_toEndOf="@+id/timesetting_inputarea"
+        app:layout_constraintTop_toBottomOf="@+id/searchfragment_dialog_time_interval_start_text"/>
+
+    <TextView
+        android:id="@+id/searchfragment_dialog_time_interval_end_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="结束时间"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintStart_toStartOf="@+id/timesetting_inputarea"
+        app:layout_constraintTop_toBottomOf="@+id/searchfragment_dialog_time_start_filter"/>
+    <TextView
+        android:id="@+id/searchfragment_dialog_time_end_filter"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:background="@drawable/timesetting_textview_bg"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:textSize="20dp"
+        android:textColor="#000000"
+        android:textAlignment="center"
+        android:text="End"
+        app:layout_constraintStart_toStartOf="@+id/timesetting_inputarea"
+        app:layout_constraintEnd_toEndOf="@+id/timesetting_inputarea"
+        app:layout_constraintTop_toBottomOf="@+id/searchfragment_dialog_time_interval_end_text"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="请注意区间选择合法性！"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@+id/searchfragment_dialog_time_end_filter"
+        app:layout_constraintStart_toStartOf="@+id/searchfragment_dialog_time_end_filter"
+        app:layout_constraintEnd_toEndOf="@+id/searchfragment_dialog_time_end_filter"/>
+
+    <Button
+        android:id="@+id/searchfragment_dialog_time_order"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:background="@drawable/ordersetting_button_animation2"
+        android:layout_marginTop="50dp"
+        android:text="正序排列"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        app:layout_constraintTop_toBottomOf="@+id/timesetting_inputarea"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/searchfragment_dialog_time_reverseorder"/>
+
+    <Button
+        android:id="@+id/searchfragment_dialog_time_reverseorder"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:text="倒序排列"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:background="@drawable/ordersetting_button_animation1"
+        app:layout_constraintTop_toTopOf="@+id/searchfragment_dialog_time_order"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/searchfragment_dialog_time_order"/>
+
+    
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

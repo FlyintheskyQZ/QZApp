@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#00CC99</color>
+    <color name="colorPrimaryDark">#00CCCC</color>
+    <color name="colorAccent">#003366</color>
+
+    <!-- Chat Activity -->
+    <color name="localBackground">#827b92</color>
+    <color name="remoteBackground">#484258</color>
+
+    <!--MainActivity BottomNavigationBar Icon Color    -->
+    <color name="barActiveColor">#ffffff</color>
+    <color name="barBackColor_active">#CC0000</color>
+    <color name="barBackColor_inactive">#D2E9FF</color>
+    <color name="bar_background">#D2E9FF</color>
+    <color name="badgeItem_bg">#FF0000</color>
+    <color name="badgeItem_text">#ffffff</color>
+<!--    SearchFragment-->
+    <color name="searchFragment_searchText">#000000</color>
+    <color name="searchFragment_search_history_text">#bfbfbf</color>
+    <color name="searchFragment_tab_selected_text">#ffffff</color>
+    <color name="searchFragment_tab_unselected_text">#CCCCFF</color>
+    <color name="searchFragment_tab_indicator">#ffffc0</color>
+    <color name="searchFragment_tab_background">#3399FF</color>
+    <color name="searchFragment_search_background">#004080</color>
+    <color name="searchFragment_searchpart">#FFFFCC</color>
+
+    <!--OrderContentActivity    -->
+    <color name="ordercontent_parent_background_color">#F0FFF0</color>
+    <color name="ordercontent_textview_background">#ffffffff</color>
+
+<!--    OrderSettingActivity-->
+    <color name="ordersetting_text_color">#1E1E1E</color>
+
+<!--    CustomerInfoSettingActivity-->
+    <color name="infosetting_text_color">#808080</color>
+    <color name="infosetting_content_color">#333333</color>
+
+<!--AgoraChatActivity-->
+    <color name="white_ru">#D2E9FF</color>
+    <color name="white">#fff</color>
+    <color name="black">#000</color>
+    <color name="blue">#32c5f3</color>
+    <color name="green">#4ACC60</color>
+    <color name="pink">#6A2290</color>
+    <color name="blue_light">#53687D</color>
+    <color name="yellow">#FF7F24</color>
+    <color name="pink_dark">#4B0082</color>
+
+<!--    RechargeActivity-->
+    <color name="recharge_error_notice">#FF0000</color>
+    <color name="recharge_notice">#C0C0C0</color>
+
+</resources>
