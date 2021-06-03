@@ -457,7 +457,6 @@ public class SearchFragment extends Fragment {
             }else if(filterWay == 2){
                 ListOperationUtils.adjustBriefOrderBackwardByDate(new_list);
             }
-
         }
         adapter.setOrderList(new_list);
         adapter.notifyDataSetChanged();
@@ -485,6 +484,7 @@ public class SearchFragment extends Fragment {
                 startActivityForResult(intent, 1);
             }
         });
+        adapter.setLoadingState(3);
         searchFragment_recyclerview.setAdapter(adapter);
         searchViewModel.loadProvideOrders(adapter, 1, 0, searchFragment_freshLayout, getActivity(), null);
     }

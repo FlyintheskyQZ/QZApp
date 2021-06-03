@@ -218,6 +218,22 @@ public class OrderContentActivity extends AppCompatActivity {
 
     }
 
+    public ImageView getOrderContent_icon2() {
+        return orderContent_icon2;
+    }
+
+    public void setOrderContent_icon2(ImageView orderContent_icon2) {
+        this.orderContent_icon2 = orderContent_icon2;
+    }
+
+    public ImageButton getOrderContent_createChat() {
+        return orderContent_createChat;
+    }
+
+    public void setOrderContent_createChat(ImageButton orderContent_createChat) {
+        this.orderContent_createChat = orderContent_createChat;
+    }
+
     private void initToolbar(){
         orderContent_toolbar = findViewById(R.id.ordercontent_toolbar);
         setSupportActionBar(orderContent_toolbar);

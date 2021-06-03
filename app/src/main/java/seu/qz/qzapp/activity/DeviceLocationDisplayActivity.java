@@ -300,6 +300,18 @@ public class DeviceLocationDisplayActivity extends AppCompatActivity {
         locationdisplay_mapview = null;
     }
 
+    @Override
+    public void onBackPressed() {
+        if(isRegisterdDevice){
+            Intent intent = new Intent();;
+            //无操作
+            setResult(5, intent);
+            finish();
+        }else {
+            super.onBackPressed();
+        }
+    }
+
     public class MyLocationListener extends BDAbstractLocationListener {
         @Override
         public void onReceiveLocation(final BDLocation location) {

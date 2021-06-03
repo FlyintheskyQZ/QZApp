@@ -357,7 +357,6 @@ public class AgoraChatActivity extends AppCompatActivity {
                     public void onSuccess(Void aVoid) {
                         //加入呼叫的频道！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！
                         String chat_cache = remoteInvitation.getContent();
-
                     }
 
                     @Override
@@ -446,6 +445,7 @@ public class AgoraChatActivity extends AppCompatActivity {
     private void sendPeerMessage(final RtmMessage message) {
         //给message中的text添加用户信息前缀
         MessageUtil.addUserInfToMessage(message, agoraChatViewModel.getMainCustomer());
+        Log.d("猜猜", message.getText());
         rtmClient.sendMessageToPeer(mPeerId, message, mChatManager.getSendMessageOptions(), new ResultCallback<Void>() {
             @Override
             public void onSuccess(Void aVoid) {
@@ -455,6 +455,7 @@ public class AgoraChatActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(ErrorInfo errorInfo) {
+                Log.d("猜猜", "失败了");
                 // refer to RtmStatusCode.PeerMessageState for the message state
                 final int errorCode = errorInfo.getErrorCode();
                 runOnUiThread(new Runnable() {
@@ -469,7 +470,9 @@ public class AgoraChatActivity extends AppCompatActivity {
                                 showToast(getString(R.string.peer_offline));
                                 break;
                             case RtmStatusCode.PeerMessageError.PEER_MESSAGE_ERR_CACHED_BY_SERVER:
-                                showToast(getString(R.string.message_cached));
+                                //若是发送信息未被及时接收而被存储在服务器，则会执行到此！
+                                MessageUtil.deleteUserInfInMessage(message);
+                                //showToast(getString(R.string.message_cached));
                                 break;
                         }
                     }

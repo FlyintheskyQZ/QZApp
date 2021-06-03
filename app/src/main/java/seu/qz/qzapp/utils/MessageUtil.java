@@ -1,5 +1,7 @@
 package seu.qz.qzapp.utils;
 
+import android.util.Log;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -112,10 +114,12 @@ public class MessageUtil {
 
     public static void deleteUserInfInMessage(RtmMessage message){
         if(message == null){
+            Log.d("猜猜", "空的");
             return;
         }
         String message_text = message.getText();
         message_text = message_text.substring(message_text.indexOf(":") + 1);
+        Log.d("猜猜", message_text);
         message.setText(message_text);
     }
 

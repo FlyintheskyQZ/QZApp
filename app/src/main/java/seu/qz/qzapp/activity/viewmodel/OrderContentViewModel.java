@@ -42,7 +42,7 @@ public class OrderContentViewModel extends ViewModel {
     public int CUSTOMER_TYPE_SALER = 2;
     //当前订单的对方信息
     private AppCustomer customer_opposite;
-    //用户身份分类：false（普通用户），true（商家）
+    //用户身份分类：false（商家），true（普通用户）
     private boolean CustomerClassification;
     //订单的简信息
     private BriefOrderItem item;
@@ -132,6 +132,7 @@ public class OrderContentViewModel extends ViewModel {
                         }else {
                             if(provideOrder.getUser_id() == null){
                                 //此处需要对商户登录时，查看未被订购的订单的区域3中的信息配置！！！！！！！！！！！！！！！！！！！！！
+                                displayProvideActivityView((Activity) context, provideOrder, CUSTOMER_TYPE_SALER);
                                 break;
                             }
                             opposite_id_provide = provideOrder.getUser_id();
@@ -282,6 +283,7 @@ public class OrderContentViewModel extends ViewModel {
             newActivity.getOrderContent_factoryAndMachine().setText("");
             newActivity.getOrderContent_merchant_location().setText("");
             newActivity.getOrderContent_pdf_email().setVisibility(View.GONE);
+            newActivity.getOrderContent_icon2().setVisibility(View.GONE);
         }
 
     }
@@ -372,11 +374,15 @@ public class OrderContentViewModel extends ViewModel {
         final OrderContentActivity newActivity = (OrderContentActivity) activity;
         //区间一部分内容（图标+合作方的姓名+手机号+机器+地址）、区间二的全部内容以及区间三的部分内容（实验数据、材料属性、操作人员、pfd图标）等不需随着订单状态而变化的部分
         newActivity.getOrderContent_stateIcon().setImageResource(R.mipmap.ic_ordercontent_state_notfinished);
-        newActivity.getOrderContent_merchant_nameAndPhone().setText(customer_opposite.getUser_registerName() + " " + customer_opposite.getPhoneNumber());
         if(customerType == CUSTOMER_TYPE_USER){
+            newActivity.getOrderContent_merchant_nameAndPhone().setText(customer_opposite.getUser_registerName() + " " + customer_opposite.getPhoneNumber());
             newActivity.getOrderContent_factoryAndMachine().setText(order.getFactory_name() + order.getDevice_orderForSaler() + "号机");
             newActivity.getOrderContent_merchant_location().setText("地址：" + order.getDevice_address());
         }else {
+            if(order.getOrder_confirmed() != 0){
+                newActivity.getOrderContent_merchant_nameAndPhone().setText(customer_opposite.getUser_registerName() + " " + customer_opposite.getPhoneNumber());
+            }
+            newActivity.getOrderContent_icon2().setVisibility(View.INVISIBLE);
             newActivity.getOrderContent_factoryAndMachine().setText("");
             newActivity.getOrderContent_merchant_location().setText("");
         }
@@ -413,7 +419,9 @@ public class OrderContentViewModel extends ViewModel {
                     //OrderContent_cancel图标使用默认展示，文字显示"撤销"
                     newActivity.getOrderContent_cancel_text().setText("撤销订单");
                     //未被下单时无客户信息
-                    newActivity.getOrderContent_merchant_nameAndPhone().setText("");
+                    newActivity.getOrderContent_merchant_nameAndPhone().setText("暂无客户下单");
+                    //无法创建聊天窗口
+                    newActivity.getOrderContent_createChat().setVisibility(View.GONE);
                     //设置修改订单按钮的监听事件
                     newActivity.getOrderContent_place().setOnClickListener(new View.OnClickListener() {
                         @Override
@@ -920,7 +928,4 @@ public class OrderContentViewModel extends ViewModel {
     public void setCustomerClassification(boolean customerClassification) {
         CustomerClassification = customerClassification;
     }
-
-
-
 }

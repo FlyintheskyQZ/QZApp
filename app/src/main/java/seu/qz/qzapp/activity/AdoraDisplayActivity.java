@@ -9,12 +9,22 @@ import io.agora.rtc.IRtcEngineEventHandler;
 import io.agora.rtc.RtcEngine;
 import io.agora.rtc.video.VideoCanvas;
 import io.agora.rtc.video.VideoEncoderConfiguration;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.RequestBody;
+import okhttp3.Response;
 import seu.qz.qzapp.R;
+import seu.qz.qzapp.entity.FinishedOrder;
 import seu.qz.qzapp.entity.ProvideOrder;
+import seu.qz.qzapp.objectfactory.OkHttpFactory;
+import seu.qz.qzapp.utils.GsonUtils;
+import seu.qz.qzapp.utils.PropertyUtil;
+import seu.qz.qzapp.utils.SystemStateUtil;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.os.Message;
 import android.util.Log;
 import android.view.SurfaceView;
 import android.view.View;
@@ -24,6 +34,13 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
+
+import com.google.gson.Gson;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Timer;
+import java.util.TimerTask;
 
 
 public class AdoraDisplayActivity extends AppCompatActivity {
@@ -160,6 +177,35 @@ public class AdoraDisplayActivity extends AppCompatActivity {
                     start_enbled = -1;
                     mStartBtn.setEnabled(false);
                     //发送指令到服务器，开启试验！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！
+                    new Timer().schedule(new TimerTask() {
+                        @Override
+                        public void run() {
+                            Message message = new Message();
+                            try {
+                                OkHttpClient client = new OkHttpClient();
+                                Map<String, String> settings = new HashMap<>();
+                                String url_key = PropertyUtil.getUrl("startExperiment", AdoraDisplayActivity.this);
+                                RequestBody requestBody = OkHttpFactory.getRequestBodyWithSettings(settings);
+                                Request request = new Request.Builder()
+                                        .url(url_key)
+                                        .post(requestBody)
+                                        .build();
+                                Response response = client.newCall(request).execute();
+                                String responseBody = response.body().string();
+                                System.out.println(responseBody);
+                                if(responseBody == null || responseBody.isEmpty()){
+                                    message.what = 1;
+                                    message.obj = null;
+                                }else{
+
+                                }
+                            }catch (Exception e){
+                                e.printStackTrace();
+                                message.what = 4;
+                                message.obj = null;
+                            }
+                        }
+                    }, 0);
                 }
             }
         });

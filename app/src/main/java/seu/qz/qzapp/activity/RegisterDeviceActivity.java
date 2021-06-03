@@ -156,9 +156,16 @@ public class RegisterDeviceActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         switch (requestCode){
             case 1:
-                String[] location = data.getStringExtra("location").split(":");
-                registerdevice_factorylocation_longitude.setText(location[0]);
-                registerdevice_factorylocation_latitude.setText(location[1]);
+                switch (resultCode){
+                    case 1:
+                        String[] location = data.getStringExtra("location").split(":");
+                        String longitude_display = location[0].substring(0, 10);
+                        String latitude_display = location[1].substring(0, 10);
+                        registerdevice_factorylocation_longitude.setText(longitude_display);
+                        registerdevice_factorylocation_latitude.setText(latitude_display);
+                        break;
+                    default:break;
+                }
                 break;
             default:break;
         }

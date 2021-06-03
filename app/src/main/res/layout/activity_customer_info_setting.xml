@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="?attr/colorPrimary"
-        app:navigationIcon="@mipmap/ic_login_backup"
+        app:navigationIcon="@mipmap/ic_ordersetting_back"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         app:popupTheme="@style/NewPopupTheme"
         app:layout_constraintTop_toTopOf="parent">

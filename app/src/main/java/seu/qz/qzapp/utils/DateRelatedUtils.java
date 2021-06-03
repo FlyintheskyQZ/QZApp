@@ -16,10 +16,10 @@ public class DateRelatedUtils {
     public static final int TYPE_CACHE = 2;
     public static final int TYPE_SHORT = 3;
 
-    private static DateFormat format_Original = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
-    private static DateFormat format_Chinese = new SimpleDateFormat("yyyy年MM月dd日 hh:mm");
-    private static DateFormat format_CacheFile = new SimpleDateFormat("yyyy_MM_dd_hh_mm_ss");
-    private static DateFormat format_Short = new SimpleDateFormat("yyyy-MM-dd-hh-mm");
+    private static DateFormat format_Original = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+    private static DateFormat format_Chinese = new SimpleDateFormat("yyyy年MM月dd日 HH:mm");
+    private static DateFormat format_CacheFile = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss");
+    private static DateFormat format_Short = new SimpleDateFormat("yyyy-MM-dd HH:mm");
 
     /**
      *

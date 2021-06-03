@@ -49,7 +49,8 @@
 
         <activity android:name=".activity.RegisterDeviceActivity"
             android:label=""/>
-        <activity android:name=".activity.RechargeActivity" />
+        <activity android:name=".activity.RechargeActivity"
+            android:label=""/>
         <activity android:name=".activity.CustomerInfoSettingActivity"
             android:label=""/>
         <activity android:name=".activity.PasswordSettingActivity"
@@ -95,19 +96,21 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
-        <activity android:name=".activity.MainActivity" />
+        <activity android:name=".activity.MainActivity"
+            android:label=""/>
         <activity android:name=".activity.RegisterActivity"
             android:label=""/>
         <activity
             android:name=".activity.SettingsActivity"
-            android:label="@string/title_activity_settings" /> <!-- label属性会被展示在标题栏上，即便删除也会使用上级的label，设置为空即不显示 -->
+            android:label="" /> <!-- label属性会被展示在标题栏上，即便删除也会使用上级的label，设置为空即不显示 -->
         <activity
             android:name=".activity.LoginActivity"
             android:label="" />
         <activity android:name=".activity.HttpTest" />
         <activity android:name=".activity.AdoraDisplayActivity"
             android:label=""/>
-        <activity android:name=".activity.Test">
+        <activity android:name=".activity.Test"
+            android:label="">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

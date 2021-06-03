@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="?attr/colorPrimary"
-        app:navigationIcon="@mipmap/ic_login_backup"
+        app:navigationIcon="@mipmap/ic_ordersetting_back"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         app:popupTheme="@style/NewPopupTheme"
         app:layout_constraintTop_toTopOf="parent">
@@ -37,7 +37,7 @@
         android:id="@+id/locationdisplay_floatbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginRight="20dp"
+        android:layout_marginRight="50dp"
         android:layout_marginBottom="20dp"
         android:src="@mipmap/ic_devicelocation_floating"
         app:layout_constraintBottom_toBottomOf="@+id/locationdisplay_mapview"
@@ -57,7 +57,7 @@
             android:layout_height="wrap_content"
             android:text="在南京市查找"
             android:textSize="15dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"/>
 
@@ -67,18 +67,19 @@
             android:layout_height="wrap_content"
             android:hint="请输入查询地址"
             android:textSize="15dp"
-            android:layout_marginTop="10dp"
-            app:layout_constraintStart_toEndOf="@+id/locationdisplay_search_text"
-            app:layout_constraintTop_toTopOf="parent"/>
+            android:layout_marginLeft="50dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/locationdisplay_search_text"/>
 
         <TextView
             android:id="@+id/locationdisplay_error"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#FF0000"
+            android:layout_marginLeft="20dp"
             android:visibility="gone"
-            app:layout_constraintTop_toBottomOf="@+id/locationdisplay_search_text"
-            app:layout_constraintStart_toStartOf="@+id/locationdisplay_search_text"/>
+            app:layout_constraintBottom_toBottomOf="@+id/locationdisplay_search_text"
+            app:layout_constraintStart_toEndOf="@+id/locationdisplay_search_text"/>
 
         <Button
             android:id="@+id/locationdisplay_search_btn"
@@ -89,7 +90,7 @@
             android:textColor="#ffffff"
             android:background="@drawable/btn_password_confirm"
             app:layout_constraintStart_toEndOf="@+id/locationdisplay_search_input"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintBottom_toBottomOf="@+id/locationdisplay_search_input"/>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
